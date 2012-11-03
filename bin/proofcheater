@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'proofcheater/runner'
+
+runner = Proofcheater::Runner.new
+runner.run
