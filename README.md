@@ -19,7 +19,7 @@ use of Prawn. Proofs are only available as 3x3 grid.
 How to Use:
 
 1. Change directory into cloned proofcheater directory
-2. Run ruby -I lib bin/proofcheater
+2. Run `ruby -I lib bin/proofcheater`
 3. Follow prompt within the terminal.
 
 ###TO DO
