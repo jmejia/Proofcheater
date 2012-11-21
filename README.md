@@ -16,7 +16,7 @@ use of Prawn. Proofs are only available as 3x3 grid.
 - Built for Mac OS X
 
 
-How to Use:
+###How to Use:
 
 1. Change directory into cloned proofcheater directory
 2. Run `ruby -I lib bin/proofcheater`
