@@ -24,7 +24,7 @@ module Proofcheater
     end
 
     def album_and_page_format(page_number)
-      "#{@album_name}_#{"%03d" % page_number}"
+      "#{@album_name.gsub(' ', '_')}_#{"%03d" % page_number}"
     end
 
     def create_subdirectories
@@ -45,7 +45,7 @@ module Proofcheater
         image_number = index % 9 + 1
         image_name = "#{album_and_page_format(page_number)}-#{"%02d" % image_number}"
         FileUtils.cp("#{@source_directory}/#{image}", "#{@organizer}/#{album_and_page_format(page_number)}/#{image_name}#{File.extname(image)}")
-        system "convert #{@source_directory}/#{image} -strip -define jpeg:extent=1048576 #{@tmp}/#{File.basename(image_name, ".*")}.jpg"
+        system "convert #{@source_directory}/#{image.gsub(' ', '\ ')} -strip -define jpeg:extent=1048576 #{@tmp}/#{File.basename(image_name, ".*")}.jpg"
         page_number += 1 if image_number == 9
       end
     end
